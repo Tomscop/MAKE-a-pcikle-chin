@@ -1,3 +1,13 @@
+//christmas
+if (obj_importnant.christmas == true) {
+	switch(sprite_index) {
+		case spr_sock1:
+			sprite_index = spr_sock1C; break;
+		case spr_sock2:
+			sprite_index = spr_sock2C; break;
+	}
+}
+
 if (obj_speechbubble.reset == true) {
 	x = xx;
 	y = yy;

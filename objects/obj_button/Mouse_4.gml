@@ -11,7 +11,7 @@ if (sprite_index == spr_credits && obj_title.start == false) {
 if (sprite_index == spr_back) {
 	obj_importnant.playx = 0;
 	audio_stop_all();
-	if (obj_speechbubble.sfx == true) {audio_play_sound(snd_click2, 9, false);}
+	if (obj_speechbubble.sfx == true) {audio_stop_sound(snd_click2); audio_play_sound(snd_click2, 9, false);}
 	room_goto(Title);
 }
 

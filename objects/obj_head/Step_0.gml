@@ -1,3 +1,15 @@
+//christmas
+if (obj_importnant.christmas == true) {
+	switch(sprite_index) {
+		case spr_glasses:
+			sprite_index = spr_glassesC; break;
+		case spr_mask:
+			sprite_index = spr_maskC; break;
+		case spr_lingoebingo:
+			sprite_index = spr_lingoebingoC; break;
+	}
+}
+
 if (obj_speechbubble.reset == true) {
 	x = xx;
 	y = yy;
