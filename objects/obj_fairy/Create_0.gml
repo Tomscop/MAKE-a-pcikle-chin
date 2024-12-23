@@ -1,4 +1,8 @@
-sprite_index = spr_fly;
+if (!obj_importnant.christmas) {
+	sprite_index = spr_fly;
+} else {
+	sprite_index = spr_flyC;
+}
 x = 1300;
 y = random_range(96, 416);
 depth = -10000000;

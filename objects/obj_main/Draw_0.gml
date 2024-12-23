@@ -2,7 +2,11 @@ depth = -9;
 draw_self();
 if (fairytime == true) {
 		draw_set_font(Font1);
-		draw_text_color(475, 115, "FAIRIES SLAURGHTED: " + string(fairyscore), c_red, c_red, c_red, c_red, 255);
+		if (!obj_importnant.christmas) {
+			draw_text_color(475, 115, "FAIRIES SLAURGHTED: " + string(fairyscore), c_red, c_red, c_red, c_red, 255);
+		} else {
+			draw_text_color(475, 115, "ELVES SLAURGHTED: " + string(fairyscore), c_red, c_red, c_lime, c_lime, 255);
+		}
 }
 if (obj_speechbubble.screenshot == false) {
 	if (obj_importnant.christmas == false) {

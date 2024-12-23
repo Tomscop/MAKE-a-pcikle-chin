@@ -5,6 +5,10 @@ if (obj_importnant.christmas == true) {
 			sprite_index = spr_sock1C; break;
 		case spr_sock2:
 			sprite_index = spr_sock2C; break;
+		case spr_winged1:
+			sprite_index = spr_winged1C; break;
+		case spr_winged2:
+			sprite_index = spr_winged2C; break;
 	}
 }
 

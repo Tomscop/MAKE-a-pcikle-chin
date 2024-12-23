@@ -10,19 +10,31 @@ if (obj_background.babybrent == true) {
 
 switch(state) {
 	case 0:
-		sprite_index = spr_fly;
+		if (!obj_importnant.christmas) {
+			sprite_index = spr_fly;
+		} else {
+			sprite_index = spr_flyC;
+		}
 		x -= 2;
 		wings0 = false;
 		wings1 = false;
 		break;
 	case 1:
-		sprite_index = spr_ohno;
+		if (!obj_importnant.christmas) {
+			sprite_index = spr_ohno;
+		} else {
+			sprite_index = spr_ohnoC;
+		}
 		x -= 1;
 		wings0 = false;
 		wings1 = false;
 		break;
 	case 2:
-		sprite_index = spr_die;
+		if (!obj_importnant.christmas) {
+			sprite_index = spr_die;
+		} else {
+			sprite_index = spr_dieC;
+		}
 		break;
 }
 
