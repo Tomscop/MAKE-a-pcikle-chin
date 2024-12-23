@@ -14,7 +14,15 @@ else {image_index = 0;}
 if (num > 200) {
 	obj_background.bgnum = 0;
 	audio_stop_sound(snd_scary);
-	if (obj_speechbubble.music == true) {audio_play_sound(mus_main, 99999, true);}
+	if (obj_speechbubble.music == true) {
+		if (obj_importnant.christmas) {
+			audio_play_sound(mus_christ, 99999, true);
+		} else if (obj_importnant.evilchin) {
+			audio_play_sound(mus_evil, 99999, true);
+		} else {
+			audio_play_sound(mus_main, 99999, true);	
+		}
+	}
 	obj_background.babybrent = false;
 	itstime = false;
 	num = 0;

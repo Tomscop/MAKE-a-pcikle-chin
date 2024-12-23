@@ -14,9 +14,15 @@ switch(sprite_index) {
 		depth = -129; break;
 	case spr_cig:
 		depth = -128; break;
+	case spr_cigC:
+		depth = -128; break;
 	case spr_creaturehead:
 		depth = -127; break;
+	case spr_creatureheadC:
+		depth = -127; break;
 	case spr_hat:
+		depth = -124; break;
+	case spr_hatC:
 		depth = -124; break;
 	case spr_lingoebingo:
 		depth = -123; break;

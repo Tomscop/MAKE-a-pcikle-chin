@@ -7,6 +7,12 @@ if (obj_importnant.christmas == true) {
 			sprite_index = spr_glassesC; break;
 		case spr_mask:
 			sprite_index = spr_maskC; break;
+		case spr_cig:
+			sprite_index = spr_cigC; break;
+		case spr_creaturehead:
+			sprite_index = spr_creatureheadC; break;
+		case spr_hat:
+			sprite_index = spr_hatC; xx2 = 600; yy2 = 300; break;
 		case spr_lingoebingo:
 			sprite_index = spr_lingoebingoC; break;
 		case spr_antennas:

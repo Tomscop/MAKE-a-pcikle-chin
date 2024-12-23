@@ -7,8 +7,16 @@ if (mouse) {
 }
 
 if (oragne == true) {
-	draw_sprite(spr_orangedancer2, animate, 800, 150);
+	if (!obj_importnant.christmas) {
+		draw_sprite(spr_orangedancer2, animate, 800, 150);
+	} else {
+		draw_sprite(spr_orangedancer2C, animate, 800, 150);
+	}
 }
 if (creature == true) {
-	draw_sprite_ext(spr_thecreature, 0, 200, 310, 2.5, 2.5, 0, c_white, 1);
+	if (!obj_importnant.christmas) {
+		draw_sprite_ext(spr_thecreature, 0, 200, 310, 2.5, 2.5, 0, c_white, 1);
+	} else {
+		draw_sprite_ext(spr_thecreatureC, 0, 200, 310, 2.5, 2.5, 0, c_white, 1);
+	}
 }

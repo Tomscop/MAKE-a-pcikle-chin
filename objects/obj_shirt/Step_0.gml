@@ -11,6 +11,14 @@ if (obj_importnant.christmas == true) {
 			sprite_index = spr_orangedancerC; break;
 		case spr_mario:
 			sprite_index = spr_marioC; break;
+		case spr_o:
+			sprite_index = spr_oC; break;
+		case spr_benz:
+			sprite_index = spr_benzC; break;
+		case spr_dave:
+			sprite_index = spr_daveC; break;
+		case spr_pickle:
+			sprite_index = spr_pickleC; break;
 	}
 }
 

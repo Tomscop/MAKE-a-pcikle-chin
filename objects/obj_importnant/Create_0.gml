@@ -4,11 +4,15 @@ draw_set_font(Font2);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-christmas = true; //TEMP
+christmas = false;
 if (current_month == 12 && current_day >= 24) {
-	christmas = true;	
+	christmas = true;
+	for (var i = 0; i < 150; i++) {
+		instance_create_depth(0, 0, -10000025, obj_snow);
+	}
 }
 
-for (var i = 0; i < 150; i++) {
-	instance_create_depth(0, 0, -10000025, obj_snow);
+evilchin = false;
+if (!christmas && current_hour == 3 && round(random_range(1, 2)) == 2) {
+	evilchin = true;
 }

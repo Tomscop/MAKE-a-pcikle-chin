@@ -19,15 +19,27 @@ if (sprite_index == spr_changebg) {
 	if (obj_background.babybrent == false) {
 		randome = round(random_range(0, 175));
 		if (randome == 27) {
-			obj_background.bgnum = 35;
+			if (obj_importnant.christmas) {obj_background.bgnum = 18;}
+			else if (obj_importnant.evilchin) {obj_background.bgnum = 5;}
+			else {obj_background.bgnum = 35;}
 			obj_background.bgX = 0;
 			audio_stop_all();
 			if (obj_speechbubble.sfx == true) {audio_play_sound(snd_scary, 30, false);}
 			obj_background.babybrent = true;
 		} else {
-			if (obj_background.bgnum < 34) {
-				obj_background.bgnum += 1;
-			} else {obj_background.bgnum = 0;}
+			if (obj_importnant.christmas) {
+				if (obj_background.bgnum < 17) {
+					obj_background.bgnum += 1;
+				} else {obj_background.bgnum = 0;}
+			} else if (obj_importnant.evilchin) {
+				if (obj_background.bgnum < 4) {
+					obj_background.bgnum += 1;
+				} else {obj_background.bgnum = 0;}
+			} else {
+				if (obj_background.bgnum < 34) {
+					obj_background.bgnum += 1;
+				} else {obj_background.bgnum = 0;}
+			}
 		}
 	}
 }
@@ -97,7 +109,15 @@ if (sprite_index == spr_reset) {
 	if (obj_background.babybrent == true) {
 		obj_background.bgnum = 0;
 		audio_stop_sound(snd_scary);
-		if (obj_speechbubble.music == true) {audio_play_sound(mus_main, 15, true);}
+		if (obj_speechbubble.music == true) {
+			if (obj_importnant.christmas) {
+				audio_play_sound(mus_christ, 99999, true);
+			} else if (obj_importnant.evilchin) {
+				audio_play_sound(mus_evil, 99999, true);
+			} else {
+				audio_play_sound(mus_main, 99999, true);	
+			}
+		}
 		obj_background.babybrent = false;
 	}
 	obj_main.chance = 10000;
@@ -105,8 +125,16 @@ if (sprite_index == spr_reset) {
 
 if (sprite_index == spr_music) {
 	obj_speechbubble.music = !obj_speechbubble.music;
-	if (obj_speechbubble.music == true && obj_background.babybrent == false) {audio_play_sound(mus_main, 99999, true);}
-	else if (obj_speechbubble.music == false) {audio_stop_sound(mus_main);}
+	if (obj_speechbubble.music == true && obj_background.babybrent == false) {
+		if (obj_importnant.christmas) {
+			audio_play_sound(mus_christ, 99999, true);
+		} else if (obj_importnant.evilchin) {
+			audio_play_sound(mus_evil, 99999, true);
+		} else {
+			audio_play_sound(mus_main, 99999, true);	
+		}
+	}
+	else if (obj_speechbubble.music == false) {audio_stop_sound(mus_main); audio_stop_sound(mus_christ); audio_stop_sound(mus_evil);}
 }
 if (sprite_index == spr_sfx) {
 	obj_speechbubble.sfx = !obj_speechbubble.sfx;
